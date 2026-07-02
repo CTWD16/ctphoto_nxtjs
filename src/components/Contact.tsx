@@ -48,19 +48,19 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contact@charlietrotterphoto.com',
-      href: 'mailto:contact@charlietrotterphoto.com'
+      value: 'info@charlietrotterphoto.com',
+      href: 'mailto:info@charlietrotterphoto.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '(555) 123-4567',
-      href: 'tel:5551234567'
+      value: '(757) 375-9901',
+      href: 'tel:7573759901'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Based in New York, NY',
+      value: 'Based in Chesapeake, VA',
       href: '#'
     }
   ]
@@ -249,15 +249,15 @@ export default function Contact() {
                 Follow my work on social media for the latest projects and behind-the-scenes content.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-primary-500 hover:text-primary-600 font-medium">
+                <a href="https://www.instagram.com/charlietrotterphoto/" className="text-primary-500 hover:text-primary-600 font-medium">
                   Instagram
                 </a>
-                <a href="#" className="text-primary-500 hover:text-primary-600 font-medium">
+                <a href="https://www.facebook.com/CharlieTrotterPhotography/" className="text-primary-500 hover:text-primary-600 font-medium">
                   Facebook
                 </a>
-                <a href="#" className="text-primary-500 hover:text-primary-600 font-medium">
+                {/* <a href="#" className="text-primary-500 hover:text-primary-600 font-medium">
                   LinkedIn
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

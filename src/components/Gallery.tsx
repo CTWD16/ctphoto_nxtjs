@@ -1,62 +1,133 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
-import ImageKitImage from './ImageKitImage'
+import { Image } from '@imagekit/next'
 
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1503437313881-503a91226402?w=800&h=600&fit=crop',
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/wedding-accesories.jpg',
     alt: 'Professional portrait photography',
-    category: 'portraits'
+    category: 'weddings'
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop',
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/wedding-Dilks-1.jpg',
     alt: 'Wedding ceremony photography',
     category: 'weddings'
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop',
-    alt: 'Corporate event photography',
-    category: 'events'
-  },
-  {
-    id: 4,
-    src: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
-    alt: 'Commercial product photography',
-    category: 'commercial'
-  },
-  {
-    id: 5,
-    src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop',
-    alt: 'Real estate interior photography',
-    category: 'real-estate'
-  },
-  {
-    id: 6,
-    src: 'https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?w=800&h=600&fit=crop',
-    alt: 'Outdoor portrait session',
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/headshot-1.jpg',
+    alt: 'Corporate Headshot photography',
     category: 'portraits'
   },
   {
-    id: 7,
-    src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&h=600&fit=crop',
+    id: 4,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/landscape-france-nice.jpg',
     alt: 'Landscape photography',
     category: 'landscapes'
   },
   {
+    id: 5,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/product-raybans.jpg',
+    alt: 'Corporate product photography - Ray Bans',
+    category: 'commercial'
+  },
+  {
+    id: 6,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/portrait-senior.jpg',
+    alt: 'Senior portrait session',
+    category: 'portraits'
+  },
+  {
+    id: 7,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/wedding-ringshot.jpg',
+    alt: 'Professional portrait photography - Rings',
+    category: 'weddings'
+  },
+  {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1515934751635-c81c6a9f469c?w=800&h=600&fit=crop',
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/portrait-prom.jpg',
     alt: 'Event photography',
+    category: 'events'
+  },
+  {
+    id: 9,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/drone-vabeach.jpg',
+    alt: 'Drone photography',
+    category: 'drone'
+  },
+  {
+    id: 10,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/portrait-family.jpg',
+    alt: 'Professional Portrait photography - family',
+    category: 'portraits'
+  },
+  {
+    id: 11,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/headshot-2.jpg',
+    alt: 'Corporate Headshot photography',
+    category: 'portraits'
+  },
+  {
+    id: 12,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/product-bmwbike.jpg',
+    alt: 'Corporate product photography - Motorcycle',
+    category: 'commercial'
+  },
+  {
+    id: 13,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/wedding-beach.jpg',
+    alt: 'Wedding ceremony photography',
+    category: 'weddings'
+  },
+  {
+    id: 14,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/drone-anguilla.jpg',
+    alt: 'Drone photography - Anguilla beach',
+    category: 'drone'
+  },
+  {
+    id: 15,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/landscape-greece.jpg',
+    alt: 'Landscape photography - Greece',
+    category: 'landscapes'
+  },
+  {
+    id: 16,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/portrait-prom-3girls.jpg',
+    alt: 'Event photography',
+    category: 'events'
+  },
+  {
+    id: 17,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-800,h-600/realestate-1.jpg',
+    alt: 'Real estate photography',
+    category: 'real-estate'
+  },
+  {
+    id: 18,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/portrait-Shirley.jpg',
+    alt: 'Professional Portrait photography - Shirley',
+    category: 'portraits'
+  },
+  {
+    id: 19,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-600,h-800/bw-concourse.jpg',
+    alt: 'Real estate photography',
+    category: 'real-estate'
+  },
+  {
+    id: 20,
+    src: 'https://ik.imagekit.io/ctp1581/assets/tr:w-1600/event-familyreunion.jpg',
+    alt: 'Professional Portrait photography - Family Reunion',
     category: 'events'
   }
 ]
 
-const categories = ['all', 'portraits', 'weddings', 'events', 'commercial', 'real-estate', 'landscapes']
+const categories = ['all', 'portraits', 'weddings', 'events', 'commercial', 'real-estate', 'landscapes', 'drone']
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -124,13 +195,13 @@ export default function Gallery() {
               onClick={() => openLightbox(image.id)}
             >
               <div className="aspect-w-4 aspect-h-3 relative">
-                <ImageKitImage
+                <Image
                   src={image.src}
                   alt={image.alt}
                   width={400}
                   height={300}
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                  transformation={{ quality: 80, crop: 'at_max' }}
+                  transformation={[{ quality: 80, crop: 'at_max' }]}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -177,15 +248,17 @@ export default function Gallery() {
             </button>
 
             <div className="max-w-4xl max-h-full">
-              <ImageKitImage
+              <Image
                 src={filteredImages.find(img => img.id === selectedImage)?.src || ''}
                 alt={filteredImages.find(img => img.id === selectedImage)?.alt || ''}
                 width={1200}
                 height={800}
                 className="max-w-full max-h-full object-contain"
                 onClick={(e: React.MouseEvent) => e.stopPropagation()}
-                transformation={{ quality: 90 }}
-                priority={true}
+                transformation={[
+                  { quality: 90 },
+                  { overlay: { type: "image", input: "CTP_logo.jpg"}}
+                ]}
               />
             </div>
           </div>

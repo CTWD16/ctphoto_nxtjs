@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import { Award, Camera, Heart, Users } from 'lucide-react'
-import ImageKitImage from './ImageKitImage'
 
 export default function About() {
   const stats = [
-    { icon: Camera, label: 'Photos Captured', value: '10,000+' },
-    { icon: Users, label: 'Happy Clients', value: '500+' },
+    { icon: Camera, label: 'Photos Captured', value: '12,000+' },
+    { icon: Users, label: 'Happy Clients', value: '350+' },
     { icon: Heart, label: 'Weddings Shot', value: '100+' },
     { icon: Award, label: 'Years Experience', value: '15+' }
   ]
@@ -18,14 +17,14 @@ export default function About() {
           <div className="relative">
             <div className="aspect-w-4 aspect-h-5 relative">
               <Image
-                src="https://images.unsplash.com/photo-1503437313881-503a91226402?w=600&h=750&fit=crop"
+                src="https://ik.imagekit.io/ctp1581/ctp_about_action.png"
                 alt="Charlie Trotter - Professional Photographer"
                 width={600}
                 height={750}
                 className="rounded-2xl shadow-2xl"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-primary-500 text-white p-6 rounded-xl shadow-xl">
+            <div className="absolute -bottom-8 -right-8 bg-gradient-to-tl from-primary-300 via-primary-400 to-primary-600 text-white p-6 rounded-xl shadow-xl">
               <div className="text-3xl font-bold">15+</div>
               <div className="text-sm">Years Experience</div>
             </div>
@@ -34,25 +33,30 @@ export default function About() {
           {/* Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-serif">
-              About Charlie Trotter
+              About Charlie Trotter Photography
             </h2>
+            <h4 className="text-xl md:text-2xl font-bold text-primary-500 mb-6 font-serif">
+              Every Story Deserves to Be Remembered
+            </h4>
             <div className="space-y-4 text-gray-600 mb-8">
               <p className="text-lg leading-relaxed">
-                With over 15 years of professional photography experience, I specialize in capturing 
-                life's most precious moments with artistic vision and technical excellence. My passion 
-                for photography began as a hobby and evolved into a career dedicated to preserving 
-                memories that last a lifetime.
+                Some of life's most meaningful moments happen in an instant—a father seeing his daughter in her wedding dress for the first time, the laughter shared between lifelong friends, or the quiet embrace between loved ones. Those moments are fleeting, but their memories shouldn't be.
               </p>
+
               <p className="text-lg leading-relaxed">
-                I believe that great photography is about more than just taking pictures—it's about 
-                understanding people, telling stories, and creating images that evoke emotion. Whether 
-                it's a wedding, corporate event, or personal portrait session, I approach every project 
-                with creativity, professionalism, and attention to detail.
+                More than 15 years ago, I picked up a camera simply because I loved capturing life as it unfolded. What started as a passion quickly became something much deeper. I realized that photography wasn't just about creating beautiful images—it was about giving people the opportunity to relive the moments that shaped their lives.
               </p>
+
               <p className="text-lg leading-relaxed">
-                My work has been featured in various publications and I've had the privilege of working 
-                with wonderful clients from all walks of life. I'm committed to delivering exceptional 
-                quality and service that exceeds expectations.
+                When I'm behind the camera, I'm watching for genuine smiles, heartfelt emotions, spontaneous laughter, and the little moments that often become the most treasured memories. Whether I'm documenting a wedding, celebrating a family's newest chapter, or creating professional portraits, my goal is always the same—to create images that feel authentic, timeless, and unmistakably you.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                I believe the best photographs aren't staged. They're experienced. That's why I take the time to get to know every client, helping you feel relaxed and confident. When you're comfortable, your story naturally unfolds, and that's when the magic happens.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                Thank you for considering me to be part of your story. It would be an honor to preserve your moments with creativity, care, and a commitment to excellence.
               </p>
             </div>
 

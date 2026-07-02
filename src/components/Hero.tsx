@@ -1,6 +1,5 @@
-import Image from 'next/image'
 import { ArrowRight, Play } from 'lucide-react'
-import ImageKitImage from './ImageKitImage'
+import { Image } from '@imagekit/next'
 
 export default function Hero() {
   return (
@@ -14,16 +13,16 @@ export default function Hero() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4" />
+          <source src="https://ik.imagekit.io/ctp1581//vecteezy_slow-motion-of-wedding-bride-happy-fun-walking-and-running_1620548.mp4" type="video/mp4" />
           {/* Fallback image for browsers that don't support video */}
-          <ImageKitImage
-            src="https://images.unsplash.com/photo-1503437313881-503a91226402?w=1920&h=1080&fit=crop"
+          <Image
+            src="https://ik.imagekit.io/ctp1581/assets/wedding-beach.jpg"
             alt="Photography background"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"
             priority={true}
-            transformation={{ quality: 85, crop: 'at_max' }}
+            transformation={[{ quality: 85, crop: 'at_max' }]}
           />
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-40" />
@@ -36,7 +35,7 @@ export default function Hero() {
           <span className="block text-accent-500">Beautiful Moments</span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-slide-up">
-          Professional photography and videography services that transform your special moments into timeless memories. 
+          Professional photography and videography services that transform special moments into timeless memories. 
           Quality work with artistic vision and attention to detail.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">

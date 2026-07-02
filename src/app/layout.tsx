@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { ImageKitProvider } from '@imagekit/next'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ImageKitProvider urlEndpoint="https://ik.imagekit.io/ctp1581">
+          {children}
+        </ImageKitProvider>
+      </body>
     </html>
   )
 }

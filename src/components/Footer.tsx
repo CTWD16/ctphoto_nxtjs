@@ -20,9 +20,9 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' }
+    { icon: Instagram, href: 'https://www.instagram.com/charlietrotterphoto/', label: 'Instagram' },
+    { icon: Facebook, href: 'https://www.facebook.com/charlietrotterphoto', label: 'Facebook' },
+    // { icon: Linkedin, href: '#', label: 'LinkedIn' }
   ]
 
   return (
@@ -93,15 +93,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                <span className="text-gray-300">contact@charlietrotterphoto.com</span>
+                <span className="text-gray-300">info@charlietrotterphoto.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                <span className="text-gray-300">(555) 123-4567</span>
+                <span className="text-gray-300">(757) 375-9901</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                <span className="text-gray-300">New York, NY</span>
+                <span className="text-gray-300">Chesapeake, VA</span>
               </div>
             </div>
           </div>

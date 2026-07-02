@@ -23,19 +23,19 @@ const services = [
     icon: Briefcase,
     title: 'Commercial Photography',
     description: 'Professional business photography for brands, products, and corporate needs.',
-    features: ['Product shots', 'Brand photography', 'Corporate headshots', 'Marketing materials']
+    features: ['Product shots', 'Brand photography', 'Logo design', 'Corporate headshots', 'Marketing materials']
   },
   {
     icon: MapPin,
     title: 'Real Estate Photography',
     description: 'Stunning property photography that showcases homes and commercial spaces at their best.',
-    features: ['Interior shots', 'Exterior photography', 'Drone footage', 'Virtual tours']
+    features: ['Interior shots', 'Exterior photography', 'Drone footage', 'Virtual tours', 'Walkthrough videos']
   },
   {
     icon: Calendar,
     title: 'Special Events',
     description: 'Custom photography packages for birthdays, anniversaries, and life celebrations.',
-    features: ['Custom packages', 'Themed sessions', 'Print options', 'Gift prints']
+    features: ['Custom packages', 'Themed sessions', 'Backdrop design', 'Print options', 'Gift prints']
   },
   {
     icon: Video,
