@@ -40,23 +40,23 @@ export default function About() {
             </h4>
             <div className="space-y-4 text-gray-600 mb-8">
               <p className="text-lg leading-relaxed">
-                Some of life's most meaningful moments happen in an instant—a father seeing his daughter in her wedding dress for the first time, the laughter shared between lifelong friends, or the quiet embrace between loved ones. Those moments are fleeting, but their memories shouldn't be.
+                Some of life's most meaningful moments happen in an instant—a father seeing his daughter in her wedding dress for the first time, the laughter shared between lifelong friends, the pride of a professional milestone, or the quiet embrace between loved ones that says more than words ever could. Those moments are fleeting, but their memories shouldn't be. That's why I became a photographer. More than 15 years ago, I picked up a camera simply because I loved capturing life as it unfolded. What began as a passion soon became a calling: preserving the moments that people never want to forget.
               </p>
 
               <p className="text-lg leading-relaxed">
-                More than 15 years ago, I picked up a camera simply because I loved capturing life as it unfolded. What started as a passion quickly became something much deeper. I realized that photography wasn't just about creating beautiful images—it was about giving people the opportunity to relive the moments that shaped their lives.
+                Photography, to me, is about so much more than creating beautiful images. It's about telling your story in a way that feels honest, emotional, and timeless. Every smile, every tear, every celebration, and every quiet glance has a story worth remembering. When I'm behind the camera, I'm not just searching for perfect lighting or the ideal composition—I'm looking for genuine connection and authentic emotion. Those are the moments that become the photographs you'll treasure for a lifetime.
               </p>
 
               <p className="text-lg leading-relaxed">
-                When I'm behind the camera, I'm watching for genuine smiles, heartfelt emotions, spontaneous laughter, and the little moments that often become the most treasured memories. Whether I'm documenting a wedding, celebrating a family's newest chapter, or creating professional portraits, my goal is always the same—to create images that feel authentic, timeless, and unmistakably you.
+                Whether I'm documenting a wedding, capturing the energy of a corporate event, creating professional portraits, or celebrating life's milestones with families, my approach is always the same. I take the time to get to know you, understand your vision, and create an experience where you can simply be yourself. When you're comfortable, the camera disappears, and your story naturally unfolds. That's where the magic happens.
               </p>
 
               <p className="text-lg leading-relaxed">
-                I believe the best photographs aren't staged. They're experienced. That's why I take the time to get to know every client, helping you feel relaxed and confident. When you're comfortable, your story naturally unfolds, and that's when the magic happens.
+                Over the past 15 years, I've had the privilege of working with incredible people from all walks of life. While I'm grateful to have my work recognized and featured, the greatest compliment I can receive is hearing a client say, "Looking at these photos takes me right back to that moment." Knowing that an image can preserve not only how something looked, but how it felt, is what inspires me to give my very best to every session, every event, and every client.
               </p>
 
               <p className="text-lg leading-relaxed">
-                Thank you for considering me to be part of your story. It would be an honor to preserve your moments with creativity, care, and a commitment to excellence.
+                Years from now, the photographs we create together will become more than images—they'll become part of your family's story, reminders of milestones, celebrations, and moments that deserve to be remembered. It's an honor to be trusted with those memories, and I approach that responsibility with creativity, passion, and an unwavering commitment to excellence. I look forward to telling your story, one unforgettable moment at a time.
               </p>
             </div>
 
