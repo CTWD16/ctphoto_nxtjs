@@ -20,6 +20,9 @@ A modern, visually appealing Next.js website for a professional photography busi
 - **Tailwind CSS**: Utility-first CSS framework
 - **Lucide React**: Modern icon library
 - **Next.js Image**: Optimized image handling
+- **Resend**: Email delivery service for contact form
+- **Zod**: Schema validation for form data
+- **ImageKit**: Image optimization and delivery
 
 ## Getting Started
 
@@ -28,12 +31,21 @@ A modern, visually appealing Next.js website for a professional photography busi
    npm install
    ```
 
-2. Run the development server:
+2. Set up environment variables:
+   Create a `.env.local` file in the root directory and add:
+   ```env
+   RESEND_API_KEY=your_resend_api_key_here
+   IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key_here
+   IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key_here
+   IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint_here
+   ```
+
+3. Run the development server:
    ```bash
    npm run dev
    ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Build for Production
 

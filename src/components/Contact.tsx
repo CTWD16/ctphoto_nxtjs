@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import { sendContactEmail } from '@/app/actions/contact'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -25,23 +27,35 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
+    setError(null)
+
+    const formDataObj = new FormData()
+    formDataObj.append('name', formData.name)
+    formDataObj.append('email', formData.email)
+    formDataObj.append('phone', formData.phone)
+    formDataObj.append('eventType', formData.eventType)
+    formDataObj.append('date', formData.date)
+    formDataObj.append('message', formData.message)
+
+    const result = await sendContactEmail(formDataObj)
+
     setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      eventType: '',
-      date: '',
-      message: ''
-    })
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
+
+    if (result.success) {
+      setIsSubmitted(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        eventType: '',
+        date: '',
+        message: ''
+      })
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000)
+    } else {
+      setError(result.error || 'Failed to send message. Please try again.')
+    }
   }
 
   const contactInfo = [
@@ -91,6 +105,11 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+                    {error}
+                  </div>
+                )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
