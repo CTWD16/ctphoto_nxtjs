@@ -13,7 +13,7 @@ export default function Hero() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://ik.imagekit.io/ctp1581//vecteezy_slow-motion-of-wedding-bride-happy-fun-walking-and-running_1620548.mp4" type="video/mp4" />
+          <source src="https://ik.imagekit.io/ctp1581/12959686_1920_1080_25fps.mp4" type="video/mp4" />
           {/* Fallback image for browsers that don't support video */}
           <Image
             src="https://ik.imagekit.io/ctp1581/assets/wedding-beach.jpg"
