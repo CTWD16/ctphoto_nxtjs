@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle, Instagram, Facebook } from 'lucide-react'
 import { sendContactEmail } from '@/app/actions/contact'
 
 export default function Contact() {
@@ -268,11 +268,13 @@ export default function Contact() {
                 Follow my work on social media for the latest projects and behind-the-scenes content.
               </p>
               <div className="flex space-x-4">
-                <a href="https://www.instagram.com/charlietrotterphoto/" className="text-primary-500 hover:text-primary-600 font-medium">
-                  Instagram
+                <a href="https://www.instagram.com/charlietrotterphoto/" className="text-primary-500 hover:text-primary-600 flex items-center space-x-2">
+                  <Instagram className="w-5 h-5" />
+                  <span className="font-medium">Instagram</span>
                 </a>
-                <a href="https://www.facebook.com/CharlieTrotterPhotography/" className="text-primary-500 hover:text-primary-600 font-medium">
-                  Facebook
+                <a href="https://www.facebook.com/CharlieTrotterPhotography/" className="text-primary-500 hover:text-primary-600 flex items-center space-x-2">
+                  <Facebook className="w-5 h-5" />
+                  <span className="font-medium">Facebook</span>
                 </a>
                 {/* <a href="#" className="text-primary-500 hover:text-primary-600 font-medium">
                   LinkedIn
