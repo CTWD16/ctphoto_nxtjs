@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        serif: ['Cormorant Garamond', 'serif'],
+        manrope: ['Manrope', 'sans-serif'],
       },
       colors: {
         primary: {

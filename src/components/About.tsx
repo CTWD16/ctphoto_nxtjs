@@ -83,7 +83,7 @@ export default function About() {
             My Philosophy
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-500">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Camera className="w-8 h-8 text-primary-500" />
               </div>
@@ -93,7 +93,7 @@ export default function About() {
                 lighting, and emotion.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-500">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-primary-500" />
               </div>
@@ -102,7 +102,7 @@ export default function About() {
                 Building rapport with clients ensures authentic moments and comfortable, natural-looking photos.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-500">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-primary-500" />
               </div>

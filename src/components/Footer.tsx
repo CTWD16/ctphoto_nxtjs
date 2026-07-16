@@ -1,4 +1,4 @@
-import { Camera, Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -31,9 +31,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <Camera className="w-8 h-8 text-primary-500" />
-              <span className="text-xl font-bold">Charlie Trotter Photography</span>
+            <div className="mb-4">
+              <span className="text-xl font-bold text-primary-700">Charlie Trotter Photography</span>
             </div>
             <p className="text-gray-300 mb-6">
               Professional photography services capturing life's beautiful moments with 

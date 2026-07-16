@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X, Camera } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,9 +31,15 @@ export default function Navigation() {
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <Camera className="w-8 h-8 text-primary-500" />
+            <Image
+              src="https://ik.imagekit.io/ctp1581/CTP_Logo.jpg?updatedAt=1782877067800"
+              alt="Charlie Trotter Photography Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
             <span className={`text-xl font-bold ${
-              scrolled ? 'text-gray-900' : 'text-white'
+              scrolled ? 'text-primary-600' : 'text-white'
             }`}>
               Charlie Trotter Photography
             </span>
